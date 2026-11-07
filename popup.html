@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links de Estudos</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <section class="main-container">
+        <section id="modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <input type="text" id="linkName" placeholder="Digite o nome do link">
+                <button id="saveLink">Salvar</button>
+            </div>
+        </section>
+
+        <main>
+            <header>
+                <h1>SLS - SimpleLinkSave</h1>
+                <label class="theme-control" for="themeSelect">
+                    <select id="themeSelect" aria-label="Selecionar tema">
+                        <option value="light">Claro</option>
+                        <option value="dark">Escuro</option>
+                        <option value="coffee">Café</option>
+                        <option value="purple">Roxo</option>
+                    </select>
+                </label>
+            </header>
+    
+            <button id="createLink">Pegar Link Atual</button>
+            
+            <ul id="linkList"></ul>
+        </main>
+    </section>
+
+    <script src="popup.js"></script>
+</body>
+</html>

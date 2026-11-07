@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Estudador",
+    "version": "1.0.0",
+    "description": "Gerenciador de links de estudo",
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "48": "images/icon-1.png",
+        "128": "images/icon-2.png"
+    }
+}

@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    /* Removemos a margem global fixa do body que estourava o popup do Chrome */
+    width: 320px;
+    background-color: var(--background);
+    color: var(--text);
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+:root {
+    --background: #fafafa;
+    --text: #111113;
+    --border: #e4e4e7;
+    --surface: #ffffff;
+    --input: #fafafa;
+    --primary: #111113;
+    --primary-hover: #27272a;
+    --muted-hover: #f4f4f5;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+main {
+    width: 100%;
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+}
+
+p {
+    font-size: 0.8rem;
+    color: #71717a;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/* Botão principal sólido, estilo ferramenta profissional */
+button {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+.theme-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 10px 0 14px;
+    font-size: 13px;
+}
+
+.theme-control select {
+    padding: 5px 8px;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+button:active {
+    transform: translateY(0.5px);
+}
+
+/* Lista estruturada de forma limpa */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 16px;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    background: var(--surface);
+    margin-bottom: 6px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    transition: border-color 0.15s ease;
+}
+
+li:hover {
+    border-color: #a1a1aa;
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    word-break: break-all;
+    flex: 1;
+    margin-right: 8px;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de excluir discreto, sem vermelho berrante */
+.delete-btn {
+    background-color: transparent;
+    color: #a1a1aa;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    font-size: 12px;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+.delete-btn:hover {
+    background-color: var(--muted-hover);
+    color: #ef4444;
+}
+
+/* MODAL limpo e direto ao ponto */
+.modal {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 85%;
+    max-width: 270px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--surface);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 9px 12px;
+    background-color: var(--input);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--text);
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.15s;
+}
+
+.modal-content input:focus {
+    border-color: var(--text);
+    background-color: var(--surface);
+}
